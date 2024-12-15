@@ -1,11 +1,13 @@
 {
-    "name": "PACKAGE_NAME",
+    "name": "zodregex",
     "version": "0.1.0",
-    "description": "DESCRIBE PACKAGE",
+    "description": "Use a zod schema alongside regex for typesafe regex parsing",
     "keywords": [
-        "ADD KEYWORDS"
+        "regex",
+        "typesafe",
+        "zod"
     ],
-    "repository": "github:dannywexler/PACKAGE_NAME",
+    "repository": "github:dannywexler/zodregex",
     "author": "Danny Wexler",
     "license": "MIT",
     "type": "module",
