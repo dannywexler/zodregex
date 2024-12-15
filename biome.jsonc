@@ -1,0 +1,46 @@
+{
+    "$schema": "https://biomejs.dev/schemas/1.9.3/schema.json",
+    "vcs": {
+        "enabled": true,
+        "clientKind": "git",
+        "useIgnoreFile": true
+    },
+    "files": {
+        "include": [
+            "src/**"
+        ]
+    },
+    "formatter": {
+        "indentWidth": 4
+    },
+    "linter": {
+        "rules": {
+            "all": true,
+            "correctness": {
+                "noNodejsModules": "off"
+            },
+            "suspicious": {
+                "noConsole": "off",
+                "noConsoleLog": "off"
+            },
+            "style": {
+                "useFilenamingConvention": {
+                    "level": "error",
+                    "options": {
+                        "requireAscii": true,
+                        "filenameCases": [
+                            "camelCase"
+                        ]
+                    }
+                },
+                "useShorthandArrayType": "off",
+                "useConsistentArrayType": {
+                    "level": "error",
+                    "options": {
+                        "syntax": "generic"
+                    }
+                }
+            }
+        }
+    }
+}
