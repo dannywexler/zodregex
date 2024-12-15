@@ -5,6 +5,7 @@ node_modules/
 # TypeScript cache
 
 *.tsbuildinfo
+tsconfig.tsbuildinfo
 
 # Optional npm cache directory
 
