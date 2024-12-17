@@ -1,4 +1,4 @@
-import { zodRegex } from "../src/main";
+import { zodRegex } from "../src";
 import { describe, expect, test } from 'vitest'
 import { z } from "zod";
 

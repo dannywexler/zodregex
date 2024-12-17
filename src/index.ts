@@ -1,8 +1,10 @@
 import type { z } from "zod";
 
-export function zodRegex<
-	GroupSchema extends z.ZodType<Record<string, unknown>>,
->(groupSchema: GroupSchema, regex: RegExp, ...alternateRegexes: Array<RegExp>) {
+export function zodRegex<Groups extends CaptureGroups>(
+	groupSchema: Groups,
+	regex: RegExp,
+	...alternateRegexes: Array<RegExp>
+) {
 	const allRegexes = [regex, ...alternateRegexes];
 	return (testString: string) => {
 		let match: RegExpMatchArray | null = null;
@@ -20,8 +22,8 @@ export function zodRegex<
 			return null;
 		}
 		const res = groupSchema.safeParse(groups) as z.SafeParseReturnType<
-			z.input<GroupSchema>,
-			z.output<GroupSchema>
+			z.input<Groups>,
+			z.output<Groups>
 		>;
 		if (!res.success) {
 			return null;
@@ -29,3 +31,5 @@ export function zodRegex<
 		return res.data;
 	};
 }
+
+export type CaptureGroups = z.ZodType<Record<string, unknown>>;
