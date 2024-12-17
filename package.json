@@ -1,6 +1,6 @@
 {
     "name": "zodregex",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "description": "Use a zod schema alongside regex for typesafe regex parsing",
     "keywords": [
         "regex",
